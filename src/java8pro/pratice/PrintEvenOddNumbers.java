@@ -3,7 +3,9 @@ package java8pro.pratice;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class PrintEvenOddNumbers {
     public static void main(String[] args) {
@@ -17,5 +19,11 @@ public class PrintEvenOddNumbers {
         Map<Boolean, List<Integer>> collect = numbers.stream().collect(Collectors.partitioningBy(x -> x % 2 == 0));
         System.out.println(collect);
 
+
+
+
+        Stream<Integer> random=Stream.generate(()->(new Random()).nextInt(100));
+
+        random.limit(500).forEach(System.out::println);
     }
 }
