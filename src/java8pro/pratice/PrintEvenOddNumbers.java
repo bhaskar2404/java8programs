@@ -1,6 +1,5 @@
 package java8pro.pratice;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -10,6 +9,9 @@ public class PrintEvenOddNumbers {
 
         List<Integer> even=numbers.stream().filter(x->x%2==0).toList();
         System.out.println(even);
+
+        List<Integer> add=numbers.stream().filter(x->x%2!=0).toList();
+        System.out.println(add);
 
 
     }
